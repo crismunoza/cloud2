@@ -9,12 +9,22 @@ public class WebClientConfig {
 
     @Bean
     public WebClient webClient(WebClient.Builder builder) {
-        return builder.baseUrl("https://fuctionuser.azurewebsites.net/api").build();
+        return builder.baseUrl("link").build();
     }
 
     @Bean
     public WebClient roleWebClient(WebClient.Builder builder) {
-        return builder.baseUrl("https://fuctionrelacionrol.azurewebsites.net/api").build();
+        return builder.baseUrl("link").build();
+    }
+
+    @Bean
+    public WebClient graphQLUserWebClient(WebClient.Builder builder) {
+        return builder.baseUrl("link").build();
+    }
+
+    @Bean
+    public WebClient graphQLRoleWebClient(WebClient.Builder builder) {
+        return builder.baseUrl("link").build();
     }
 }
 

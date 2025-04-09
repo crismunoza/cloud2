@@ -1,0 +1,14 @@
+type UserRole {
+    idRol: ID
+    nombreRol: String
+}
+
+type Query {
+    getUserRoles(idUser: ID!): [UserRole]
+}
+
+type Mutation {
+    createUserRole(idUser: ID!, idRol: ID!): String
+    updateUserRole(idUser: ID!, oldIdRol: ID!, newIdRol: ID!): String
+    deleteUserRole(idUser: ID!, idRol: ID!): String
+}
