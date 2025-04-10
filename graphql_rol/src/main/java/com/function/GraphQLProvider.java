@@ -38,8 +38,6 @@ public class GraphQLProvider {
             GraphQLSchema schema = new SchemaGenerator().makeExecutableSchema(typeRegistry, wiring);
             graphQL = GraphQL.newGraphQL(schema).build();
 
-            System.out.println("✅ GraphQL inicializado correctamente");
-
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Error al inicializar GraphQL: " + e.getMessage(), e);
