@@ -9,22 +9,22 @@ public class WebClientConfig {
 
     @Bean
     public WebClient webClient(WebClient.Builder builder) {
-        return builder.baseUrl("link").build();
+        return builder.baseUrl("Link").build();
     }
 
     @Bean
     public WebClient roleWebClient(WebClient.Builder builder) {
-        return builder.baseUrl("link").build();
+        return builder.baseUrl("Link").build();
     }
 
     @Bean
     public WebClient graphQLUserWebClient(WebClient.Builder builder) {
-        return builder.baseUrl("link").build();
+        return builder.baseUrl("Link").build();
     }
 
     @Bean
     public WebClient graphQLRoleWebClient(WebClient.Builder builder) {
-        return builder.baseUrl("link").build();
+        return builder.baseUrl("Link").build();
     }
 }
 

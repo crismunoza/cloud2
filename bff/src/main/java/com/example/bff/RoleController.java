@@ -14,9 +14,9 @@ public class RoleController {
         this.roleService = roleService;
     }
 
-    @PostMapping
-    public Mono<String> createRole(@RequestBody String roleJson) {
-        return roleService.createRole(roleJson);
+    @GetMapping("/all")
+    public Mono<String> getAllRol() {
+        return roleService.getAllRol();
     }
 
     @GetMapping("/{idUser}")
@@ -24,13 +24,8 @@ public class RoleController {
         return roleService.getRolesByUserId(idUser);
     }
 
-    @PutMapping
-    public Mono<String> updateRole(@RequestBody String roleJson) {
-        return roleService.updateRole(roleJson);
-    }
-
-    @DeleteMapping
-    public Mono<String> deleteRole(@RequestParam String idUser, @RequestParam String idRol) {
-        return roleService.deleteRole(idUser, idRol);
+    @PostMapping("/event")
+    public Mono<String> sendUserEvent(@RequestBody String userJson) {
+        return roleService.sendUserEvent(userJson);
     }
 }
